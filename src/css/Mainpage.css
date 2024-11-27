@@ -124,11 +124,33 @@ header {
 }
 
 .selected {
-    color: green;
-    font-size: 20px;
+    color: green !important;
+    font-size: 20px !important;
 }
 
 .err-msg {
     color: red !important;
     font-size: 20px !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dice {
+    width: 100px;
+    /* Adjust the size as needed */
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.spin {
+    animation: spin 0.5s linear;
+    /* Adjust duration as needed */
 }
